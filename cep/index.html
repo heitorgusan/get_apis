@@ -12,21 +12,20 @@
     
     <main class="container">
         <h1 class="title">Buscar Endereço por CEP</h1>
-
+        
         <div class="row">
             <div class="inputbox">
                 <input type="text" id="cep"  required>
                 <label for="cep">CEP</label>
+                
             </div>
+            <button id ="btnLimpar">limpar</button>
         </div>
+        <div id = "statusCEP">Status:</div>
         <div class="row">
             <div class="inputbox">
                 <input type="text" id="endereco"  required>
                 <label for="endereco">Endereço</label>
-            </div>
-            <div class="inputbox">
-                <input type="text" id="numero"  required>
-                <label for="numero">Número</label>
             </div>
         </div>
         <div class="row">
@@ -47,5 +46,7 @@
             <button>Salvar</button>
         </div>
     </main>
+
+    <script src = "script.js"></script>
 </body>
 </html>

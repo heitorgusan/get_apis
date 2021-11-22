@@ -109,3 +109,10 @@ input::-webkit-inner-spin-button {
 #cep{
     width: 150px;
 }
+
+.green{
+    color:rgba(5, 104, 26, 0.685);
+}
+.red{
+    color: red;
+}
