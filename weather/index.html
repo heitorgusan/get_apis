@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Previsão do Tempo</title>
 </head>
 <body>
-    <h1>Digite a cidade</h1>
-    <p>Exemplo:new york</p>
-    <input type="text" class = "searchBox">
-    <button class = "searchButton">Pesquisar</button>
-    <div class= "resultado"></div>
+    <main class="container">
+        <h1 class="title">Previsão do Tempo</h1>
+        
+        <div class="row">
+            <div class="inputbox">
+                <input type="text" class="searchBox">
+                <label for="searchBox">Buscar Local</label>
+                
+            </div>
+            <button class ="searchButton">Buscar</button>
+        </div>
+        <div class = "exemplo">Exemplo: New York, Sao Paulo, Pratania</div>
+        <div class="row">
+            <div class="inputbox">
+                <input type="text" id="temperatura" required >
+                <label for="temperatura">Temperatura</label>
+                
+            </div>
+            <div class="inputbox">
+                <input type="text" id="umidade"  required>
+                <label for="Umidade">Umidade</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="sensacao"  required>
+                <label for="umidade">Sensação</label>
+            </div>
+        </div>
+        <div class="row">
+            <div id = 'foto'>
+            </div>
+        </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>

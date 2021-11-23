@@ -18,14 +18,21 @@ async function exibirTempo(cidade){
 }
 
 function exibirResultado(informacoes){
-    const temperatura = '<h2> Temperatura: '+informacoes.temperature+' Graus</h2>';
-    const umidade = '<h2> Umidade: '+informacoes.humidity+'%</h2>';
-    const isDay = '<h2> Está de dia: '+informacoes.is_day+'</h2>';
-    const clima = '<h2> Clima: '+informacoes.weather_descriptions[0]+'</h2>';
+    //SELECIONANDO OS CAMPOS
+    const temperatura = document.querySelector('#temperatura');
+    const umidade = document.querySelector('#umidade');
+    const sensacao = document.querySelector('#sensacao');
+    const foto = document.querySelector('#foto');
+    
+    //GRAVANDO
+    //FOTO
     const srcImg = informacoes.weather_icons[0];
     let img = document.createElement('img');
     img.src = srcImg;
-
-    resultado.innerHTML = temperatura+umidade+isDay+clima;
-    resultado.appendChild(img);
+    foto.innerHTML = '';
+    foto.appendChild(img);
+    //OUTROS CAMPOS
+    temperatura.value = informacoes.temperature + '°';
+    umidade.value = informacoes.humidity + '%';
+    sensacao.value = informacoes.feelslike + '°'
 }
